@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xPq-gA-ty6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game of Thrones-->
+        <scene sceneID="aiL-iQ-PS7">
+            <objects>
+                <tableViewController id="8pV-or-Zbf" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="190" sectionHeaderHeight="28" sectionFooterHeight="28" id="lVS-JK-Ze9">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellID" rowHeight="190" id="rEo-C7-n5p" customClass="CustomTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rEo-C7-n5p" id="g0F-75-zTt">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kmm-R3-0yr">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="189"/>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDY-De-1SB">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="138" y="68" width="124" height="42"/>
+                                            </variation>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c1d-2P-tcq">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="DyS-QA-hkH"/>
+                                                <constraint firstAttribute="height" constant="80" id="liY-MM-WWi"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="DyS-QA-hkH"/>
+                                                    <exclude reference="liY-MM-WWi"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="DyS-QA-hkH"/>
+                                                    <include reference="liY-MM-WWi"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="c1d-2P-tcq" firstAttribute="top" secondItem="g0F-75-zTt" secondAttribute="topMargin" constant="-8" id="Ywm-dm-9hS"/>
+                                        <constraint firstItem="c1d-2P-tcq" firstAttribute="trailing" secondItem="g0F-75-zTt" secondAttribute="trailingMargin" id="iJQ-9j-RoD"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="Kmm-R3-0yr"/>
+                                            <exclude reference="XDY-De-1SB"/>
+                                            <exclude reference="c1d-2P-tcq"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="Ywm-dm-9hS"/>
+                                            <exclude reference="iJQ-9j-RoD"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="Kmm-R3-0yr"/>
+                                            <include reference="XDY-De-1SB"/>
+                                            <include reference="c1d-2P-tcq"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="Ywm-dm-9hS"/>
+                                            <include reference="iJQ-9j-RoD"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="image1" destination="Kmm-R3-0yr" id="jf5-ok-Bxu"/>
+                                    <outlet property="image2" destination="c1d-2P-tcq" id="koW-HA-Fpw"/>
+                                    <outlet property="label" destination="XDY-De-1SB" id="38Y-B7-F4P"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8pV-or-Zbf" id="ByI-7G-F7f"/>
+                            <outlet property="delegate" destination="8pV-or-Zbf" id="ZPC-Qt-ybb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Game of Thrones" id="GDh-g2-kn4">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="234-tL-dej">
+                            <connections>
+                                <action selector="onEditButtonPressed:" destination="8pV-or-Zbf" id="pYN-hA-8zi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="rKU-Vb-u9k">
+                            <connections>
+                                <segue destination="AQ0-s8-dLU" kind="show" id="ydi-fQ-oME"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="laP-xU-79s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2116.5" y="389"/>
+        </scene>
+        <!--Add a character-->
+        <scene sceneID="lcK-dn-e0e">
+            <objects>
+                <viewController id="AQ0-s8-dLU" customClass="AddViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wD7-K5-E5d"/>
+                        <viewControllerLayoutGuide type="bottom" id="90G-Xc-38Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qf8-fg-qoO">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iBD-UE-Wah">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="35" y="100" width="331" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="caZ-sY-Jl9">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="35" y="151" width="331" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter house" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eV9-3n-RfE">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="35" y="201" width="331" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter actor" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a42-cA-dCU">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="35" y="258" width="331" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afE-zM-Ri4">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Male"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="119" y="332" width="33" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onMalePressed:" destination="AQ0-s8-dLU" eventType="touchUpInside" id="MuB-4w-By9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LH5-UO-amD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Female"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="233" y="331" width="50" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onFemalePressed:" destination="AQ0-s8-dLU" eventType="touchUpInside" id="YBw-fr-0Es"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="iBD-UE-Wah"/>
+                                <exclude reference="caZ-sY-Jl9"/>
+                                <exclude reference="eV9-3n-RfE"/>
+                                <exclude reference="a42-cA-dCU"/>
+                                <exclude reference="afE-zM-Ri4"/>
+                                <exclude reference="LH5-UO-amD"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="iBD-UE-Wah"/>
+                                <include reference="caZ-sY-Jl9"/>
+                                <include reference="eV9-3n-RfE"/>
+                                <include reference="a42-cA-dCU"/>
+                                <include reference="afE-zM-Ri4"/>
+                                <include reference="LH5-UO-amD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add a character" id="9zL-tn-b3h">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="rcB-6x-yus">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8nX-Wd-AP1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="onDonePressed:" destination="AQ0-s8-dLU" eventType="touchUpInside" id="aPJ-xm-gBp"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="onDonePressed:" destination="AQ0-s8-dLU" id="1TL-md-49g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="actorTextField" destination="a42-cA-dCU" id="WJ2-6J-3Kb"/>
+                        <outlet property="ageTextField" destination="caZ-sY-Jl9" id="ocO-nd-mfb"/>
+                        <outlet property="houseTextField" destination="eV9-3n-RfE" id="K4m-vq-i6B"/>
+                        <outlet property="nameTextField" destination="iBD-UE-Wah" id="yhs-Ej-erR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2pO-6W-5dW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2820" y="389"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1CH-c2-w1R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xPq-gA-ty6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dnd-0J-r7K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8pV-or-Zbf" kind="relationship" relationship="rootViewController" id="IDO-p0-GHR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBk-tf-5Wg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1435.5" y="389"/>
+        </scene>
+    </scenes>
+</document>
